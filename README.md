@@ -54,20 +54,6 @@ No build tools or dependencies required.
 7. **Final CTA** — closing invitation to the masterclass
 8. **Email capture popup** — triggered from any primary CTA
 
-## 🖼 Adding a Screenshot
-
-To show the page in action:
-
-1. Open `siterev.html` in your browser and take a screenshot (full-page screenshot extensions work well for capturing the whole hero + sections).
-2. Save it into the `img/` folder, e.g. `img/screenshot.png`.
-3. Commit and push:
-```bash
-   git add img/screenshot.png
-   git commit -m "Add landing page screenshot"
-   git push
-```
-The `![Landing page screenshot](img/screenshot.png)` line at the top of this README will then render it automatically — no further changes needed.
-
 ## 📄 License
 
 This project is for portfolio/client use. All chess content, branding, and imagery belong to Remote Chess Academy / GM Igor Smirnov.
