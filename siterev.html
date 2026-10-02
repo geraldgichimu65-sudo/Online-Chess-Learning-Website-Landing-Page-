@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remote Chess Academy — GM Igor Smirnov</title>
+
+  <!-- Fonts: Playfair Display (prestige headlines) + Lora (refined body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="siterev.css" />
+
+</head>
+<body>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section class="hero" aria-label="Hero">
+
+  <!-- Background layers -->
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <!-- Floating king chess piece watermark -->
+  <div class="deco-piece" aria-hidden="true">♔</div>
+
+  <!-- ---- Navigation ---- -->
+  <nav class="hero__nav">
+    <a href="#" class="nav__logo" aria-label="Remote Chess Academy home">
+      <!-- Inline king icon (SVG) -->
+      <svg class="nav__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M12 2v3M10.5 5h3M8 22h8M6 22l2-8h8l2 8"/>
+        <path d="M9 14c0-3.9 1.3-6 3-6s3 2.1 3 6"/>
+        <path d="M10 5l-2 4M14 5l2 4"/>
+      </svg>
+      <span class="nav__logo">
+        <img src="/img/rca-logo.png" alt="Remote Chess Academy logo" style="height:100px; vertical-align: middle;" />
+      </span>
+    </a>
+    <span class="nav__badge">Est. 2012</span>
+  </nav>
+
+  <!-- ---- Main content ---- -->
+  <div class="hero__body">
+
+    <!-- Eyebrow -->
+    <div class="hero__eyebrow" aria-label="Section label">
+      <span class="hero__eyebrow-line" aria-hidden="true"></span>
+      <span class="hero__eyebrow-text">Free Masterclass by GM Igor Smirnov</span>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero__headline">
+      <span class="hl-gold">3</span> <span class="hl-italic">Simple</span> Chess Rules to Reach <span class="hl-gold">2000</span> Rating Faster
+    </h1>
+
+    <!-- Sub-headline -->
+    <p class="hero__sub">
+      Discover the exact system Igor used to reach Grandmaster — and has since taught to thousands of club players who broke through their rating plateaus in weeks, not years.
+    </p>
+
+    <!-- CTA -->
+    <div class="cta-wrap">
+      <button onclick="openEmailPopup()" class="btn-primary btn-primary--hero" aria-label="Get your free chess training" type="button">
+        <span>Get Free Training Now</span>
+        <!-- Arrow icon -->
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </button>
+      <span class="btn-secondary-text">No cost. No credit card.</span>
+    </div>
+
+    <!-- Trust signals -->
+    <div class="hero__trust" role="list" aria-label="Credentials">
+
+      <div class="trust-item" role="listitem">
+        <svg class="trust-item__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+        </svg>
+        <span class="trust-item__label">FIDE Grandmaster</span>
+      </div>
+
+      <div class="trust-divider" aria-hidden="true"></div>
+
+      <div class="trust-item" role="listitem">
+        <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span class="trust-item__label">50,000+ Students</span>
+      </div>
+
+      <div class="trust-divider" aria-hidden="true"></div>
+
+      <div class="trust-item" role="listitem">
+        <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        <span class="trust-item__label">130+ Countries</span>
+      </div>
+
+    </div>
+
+  </div><!-- /.hero__body -->
+
+  <!-- ---- Igor's portrait ---- -->
+  <figure class="hero__portrait" aria-label="Portrait of GM Igor Smirnov">
+    <div class="portrait__frame">
+      <div class="portrait__board-bg" aria-hidden="true"></div>
+      <div class="portrait__img-wrap">
+        <!--
+          PLACEHOLDER: Replace src with Igor's actual photo.
+          Recommended: ~600px wide, transparent or dark background.
+          The mask will handle blending.
+        -->
+        <img
+          src="/img/igor-smirnov-transparent-removebg-preview.png"
+          alt="GM Igor Smirnov, Grandmaster and founder of Remote Chess Academy"
+          loading="eager"
+        />
+      </div>
+      <!-- Nameplate -->
+      <figcaption class="portrait__nameplate">
+        <span class="nameplate__name">GM Igor Smirnov</span>
+        <span class="nameplate__title">Grandmaster · Coach · Founder, RCA</span>
+      </figcaption>
+    </div>
+  </figure>
+
+  <!-- Decorative directional cue: a subtle curved line guiding the eye from
+       the portrait toward the primary CTA. Desktop-only (see CSS) — on mobile
+       the portrait already sits above the CTA, so the layout itself implies direction. -->
+  <svg class="hero__direction-cue" viewBox="0 0 400 300" fill="none" aria-hidden="true">
+    <path d="M370 40 C 260 90, 180 140, 90 190" stroke="url(#directionGradient)" stroke-width="1.5" stroke-dasharray="2 10" stroke-linecap="round"/>
+    <defs>
+      <linearGradient id="directionGradient" x1="370" y1="40" x2="90" y2="190" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="var(--gold)" stop-opacity="0"/>
+        <stop offset="0.5" stop-color="var(--gold)" stop-opacity="0.5"/>
+        <stop offset="1" stop-color="var(--gold)" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ---- Scroll indicator ---- -->
+  <a href="#learn" class="hero__scroll" aria-label="Scroll down to learn more">
+    <span class="scroll__label">Scroll</span>
+    <div class="scroll__track" aria-hidden="true">
+      <div class="scroll__dot"></div>
+    </div>
+  </a>
+
+</section>
+<!-- /HERO SECTION -->
+
+
+<!-- ============================================================
+     WHAT YOU'LL LEARN SECTION
+============================================================ -->
+<section class="learn" id="learn" aria-label="What you will learn">
+
+  <!-- Subtle top divider line with chess motif -->
+  <div class="learn__divider" aria-hidden="true">
+    <span class="divider__line"></span>
+    <span class="divider__piece">♟</span>
+    <span class="divider__line"></span>
+  </div>
+
+  <div class="learn__inner">
+
+    <!-- Section header -->
+    <header class="learn__header reveal" data-reveal="fade-up">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Inside the Free Masterclass</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="learn__title">
+        What You'll <em>Master</em>
+      </h2>
+      <p class="learn__intro">
+        Four principles Igor has distilled from decades at Grandmaster level —
+        each one a lever that immediately changes how you play.
+      </p>
+    </header>
+
+    <!-- Cards grid -->
+    <div class="learn__grid" role="list">
+
+      <!-- Card 1: Opening — Rook controls files & space -->
+      <article class="learn-card reveal" data-reveal="fade-up" data-delay="0" role="listitem">
+        <div class="learn-card__icon-wrap" aria-hidden="true">
+          <img class="learn-card__piece-img" src="/img/rook.png" alt="" />
+          <div class="learn-card__icon-glow"></div>
+        </div>
+        <div class="learn-card__num" aria-hidden="true">01</div>
+        <h3 class="learn-card__title">Opening Mastery</h3>
+        <p class="learn-card__text">Play any opening with confidence — even ones you've never studied.</p>
+        <ul class="learn-card__points">
+          <li>Grasp the principles behind moves, not 20-move memorisation</li>
+          <li>Recognise structures instantly, in any opening</li>
+          <li>Never freeze when opponents leave "the book"</li>
+        </ul>
+        <div class="learn-card__bar" aria-hidden="true"><span></span></div>
+      </article>
+
+      <!-- Card 2: Middlegame — Queen commands the board -->
+      <article class="learn-card reveal" data-reveal="fade-up" data-delay="1" role="listitem">
+        <div class="learn-card__icon-wrap" aria-hidden="true">
+          <img class="learn-card__piece-img" src="/img/queen.png" alt="" />
+          <div class="learn-card__icon-glow"></div>
+        </div>
+        <div class="learn-card__num" aria-hidden="true">02</div>
+        <h3 class="learn-card__title">Middlegame Dominance</h3>
+        <p class="learn-card__text">Spot the imbalances your opponents miss every single game.</p>
+        <ul class="learn-card__points">
+          <li>Know exactly when to attack vs. manoeuvre</li>
+          <li>Convert pressure into concrete points</li>
+          <li>Read positions like a titled player</li>
+        </ul>
+        <div class="learn-card__bar" aria-hidden="true"><span></span></div>
+      </article>
+
+      <!-- Card 3: Mindset — King = composure under pressure -->
+      <article class="learn-card reveal" data-reveal="fade-up" data-delay="2" role="listitem">
+        <div class="learn-card__icon-wrap" aria-hidden="true">
+          <img class="learn-card__piece-img" src="/img/king.png" alt="" />
+          <div class="learn-card__icon-glow"></div>
+        </div>
+        <div class="learn-card__num" aria-hidden="true">03</div>
+        <h3 class="learn-card__title">Grandmaster Mindset</h3>
+        <p class="learn-card__text">Think the way Grandmasters actually think, move by move.</p>
+        <ul class="learn-card__points">
+          <li>Stop reacting — start dictating the game</li>
+          <li>Build a strategic vision across the whole board</li>
+          <li>Stay composed under time pressure</li>
+        </ul>
+        <div class="learn-card__bar" aria-hidden="true"><span></span></div>
+      </article>
+
+      <!-- Card 4: Progression — Knight = the unexpected leap forward -->
+      <article class="learn-card reveal" data-reveal="fade-up" data-delay="3" role="listitem">
+        <div class="learn-card__icon-wrap" aria-hidden="true">
+          <img class="learn-card__piece-img" src="/img/knight.png" alt="" />
+          <div class="learn-card__icon-glow"></div>
+        </div>
+        <div class="learn-card__num" aria-hidden="true">04</div>
+        <h3 class="learn-card__title">Rapid Progression System</h3>
+        <p class="learn-card__text">The exact method that separates 1200-plateau players from 2000+.</p>
+        <ul class="learn-card__points">
+          <li>Practice less, improve faster</li>
+          <li>Follow Igor's proven RCA framework</li>
+          <li>Track measurable rating gains, not guesswork</li>
+        </ul>
+        <div class="learn-card__bar" aria-hidden="true"><span></span></div>
+      </article>
+
+    </div><!-- /.learn__grid -->
+
+    <!-- Inline CTA -->
+    <div class="learn__cta reveal" data-reveal="fade-up" data-delay="4">
+      <button onclick="openEmailPopup()" class="btn-primary" aria-label="Get free chess training" type="button">
+        <span>Start Learning Free</span>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </button>
+      <p class="cta-subtext">Join 50,000+ students in 130 countries</p>
+    </div>
+
+  </div><!-- /.learn__inner -->
+
+</section>
+<!-- /WHAT YOU'LL LEARN -->
+
+
+<!-- ============================================================
+     SECOND CTA — Refined pause / invitation
+============================================================ -->
+<section class="cta-band" id="free-training" aria-label="Free training invitation">
+
+  <div class="cta-band__bg" aria-hidden="true"></div>
+  <div class="cta-band__watermark" aria-hidden="true">♛</div>
+
+  <div class="cta-band__inner">
+
+    <!-- Top ornamental rule -->
+    <div class="cta-band__ornament reveal" data-reveal="fade-up" data-delay="0" aria-hidden="true">
+      <span class="ornament__line"></span>
+      <svg class="ornament__diamond" viewBox="0 0 12 12" fill="currentColor">
+        <path d="M6 0l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/>
+      </svg>
+      <span class="ornament__line"></span>
+    </div>
+
+    <p class="cta-band__eyebrow reveal" data-reveal="fade-up" data-delay="1">Free Masterclass</p>
+
+    <h2 class="cta-band__headline reveal" data-reveal="fade-up" data-delay="2">
+      Learn the 3 rules that unlock <em>faster rating gains.</em>
+    </h2>
+
+    <p class="cta-band__body reveal" data-reveal="fade-up" data-delay="3">
+      In one free training, GM Igor Smirnov shows you exactly what separates rapid 
+      improvers from players stuck at the same rating for years. No obligations.
+    </p>
+
+    <div class="cta-band__action reveal" data-reveal="fade-up" data-delay="4">
+      <button onclick="openEmailPopup()" class="btn-primary" aria-label="Get your free chess training now" type="button">
+        <span>Get Free Training Now</span>
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </button>
+    </div>
+
+    <p class="cta-band__reassurance reveal" data-reveal="fade-up" data-delay="5">
+      Free &nbsp;·&nbsp; Instant access &nbsp;·&nbsp; No credit card
+    </p>
+
+    <!-- Bottom ornamental rule -->
+    <div class="cta-band__ornament cta-band__ornament--bottom reveal" data-reveal="fade-up" data-delay="5" aria-hidden="true">
+      <span class="ornament__line"></span>
+      <svg class="ornament__diamond" viewBox="0 0 12 12" fill="currentColor">
+        <path d="M6 0l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/>
+      </svg>
+      <span class="ornament__line"></span>
+    </div>
+
+  </div>
+</section>
+<!-- /SECOND CTA -->
+
+
+
+
+
+<!-- ============================================================
+     ABOUT IGOR SECTION
+============================================================ -->
+<section class="about" id="about-igor" aria-label="About GM Igor Smirnov">
+
+  <div class="about__inner">
+
+    <!-- ---- Section header ---- -->
+    <header class="about__header reveal" data-reveal="fade-up" data-delay="0">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">The Coach Behind the Method</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="about__title">Meet <em>GM Igor Smirnov</em></h2>
+    </header>
+
+    <!-- ---- Two-column editorial layout ---- -->
+    <div class="about__layout">
+
+      <!-- LEFT: Portrait column -->
+      <aside class="about__portrait-col reveal" data-reveal="fade-up" data-delay="1" aria-label="Igor Smirnov portrait">
+        <div class="about__portrait-frame">
+
+          <!-- Chessboard mosaic background tile -->
+          <div class="about__portrait-tile" aria-hidden="true"></div>
+
+          <!-- Gold corner accents — all four corners -->
+          <div class="about__corner about__corner--tl" aria-hidden="true"></div>
+          <div class="about__corner about__corner--br" aria-hidden="true"></div>
+
+          <!-- The photo -->
+          <div class="about__portrait-img-wrap">
+            <img src="img/instructor-removebg-preview.png"
+              alt="Grandmaster Igor Smirnov — founder of Remote Chess Academy"
+              width="480"
+              height="560"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Floating credential badge -->
+          <div class="about__badge" aria-label="FIDE Grandmaster">
+            <span class="badge__icon" aria-hidden="true">♔</span>
+            <div class="badge__text">
+              <span class="badge__title">FIDE Grandmaster</span>
+              <span class="badge__sub">Rated 2500+</span>
+            </div>
+          </div>
+
+        </div><!-- /.about__portrait-frame -->
+      </aside>
+
+      <!-- RIGHT: Content column -->
+      <div class="about__content">
+
+        <!-- Opening pull quote — the single most compelling sentence -->
+        <blockquote class="about__pullquote reveal" data-reveal="fade-up" data-delay="2">
+          <p>"Most players study chess their whole lives and never improve — because nobody taught them <em>how</em> to study."</p>
+          <cite>— GM Igor Smirnov</cite>
+        </blockquote>
+
+        <!-- Bio paragraphs — broken into digestible chunks with typographic rhythm -->
+        <div class="about__bio">
+
+          <p class="about__bio-p reveal" data-reveal="fade-up" data-delay="3">
+            Igor Smirnov earned his International Master title at just <strong>13 years old</strong> — 
+            and his Grandmaster title at 20. He didn't stop there. After reaching the elite 
+            levels of competitive chess, Igor turned his attention to a harder problem: 
+            <em>why do most chess players never break through their rating ceiling?</em>
+          </p>
+
+          <p class="about__bio-p reveal" data-reveal="fade-up" data-delay="4">
+            The answer, he found, wasn't talent. It was method. Most club players study 
+            openings, memorise tactics, and grind bullet games — but never develop the 
+            strategic thinking that separates a 1400 from a 2000. Igor spent years 
+            reverse-engineering the Grandmaster thought process into a system anyone could follow.
+          </p>
+
+          <!-- Inline stat strip — breaks the text, adds rhythm -->
+          <div class="about__stats reveal" data-reveal="fade-up" data-delay="4">
+            <div class="about__stat">
+              <span class="stat__num">13</span>
+              <span class="stat__label">Age at IM title</span>
+            </div>
+            <div class="about__stat-div" aria-hidden="true"></div>
+            <div class="about__stat">
+              <span class="stat__num">20</span>
+              <span class="stat__label">Age at GM title</span>
+            </div>
+            <div class="about__stat-div" aria-hidden="true"></div>
+            <div class="about__stat">
+              <span class="stat__num">50K+</span>
+              <span class="stat__label">Students worldwide</span>
+            </div>
+            <div class="about__stat-div" aria-hidden="true"></div>
+            <div class="about__stat">
+              <span class="stat__num">130+</span>
+              <span class="stat__label">Countries reached</span>
+            </div>
+          </div>
+
+          <p class="about__bio-p reveal" data-reveal="fade-up" data-delay="5">
+            In 2012, Igor founded the <strong>Remote Chess Academy</strong> — now one of the 
+            world's most followed chess education platforms. His students have gone on to win 
+            national championships, earn FIDE titles, and — more importantly to Igor — 
+            finally start enjoying the game again.
+          </p>
+
+          <p class="about__bio-p reveal" data-reveal="fade-up" data-delay="5">
+            Featured in <em>The Hindu</em> and recognised internationally, Igor has given 
+            simultaneous exhibitions on 10 boards and coached players across every continent. 
+            His methods have been called "the missing manual for adult chess improvement."
+          </p>
+
+        </div><!-- /.about__bio -->
+
+      </div><!-- /.about__content -->
+
+    </div><!-- /.about__layout -->
+
+  </div><!-- /.about__inner -->
+
+</section>
+<!-- /ABOUT IGOR -->
+
+
+<!-- ============================================================
+     ACHIEVEMENTS SECTION
+============================================================ -->
+<section class="achievements" id="achievements" aria-label="Igor Smirnov's achievements">
+
+  <div class="achievements__inner">
+
+    <!-- Section header -->
+    <header class="achievements__header reveal" data-reveal="fade-up" data-delay="0">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">A Career at the Highest Level</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="achievements__title">Proof on the <em>Board</em></h2>
+      <p class="achievements__intro">
+        Igor doesn't teach theory he read in a book. Every principle in his system
+        was forged in tournament play, at the highest levels of competitive chess.
+      </p>
+    </header>
+
+    <!-- Achievements grid: alternating image-left / image-right layout -->
+    <div class="ach-grid">
+
+      <!-- 1: Kasparov's Cup -->
+      <article class="ach-item reveal" data-reveal="fade-up" data-delay="0">
+        <div class="ach-item__img-wrap">
+          <div class="ach-item__img-bg" aria-hidden="true"></div>
+          <img
+            src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/smirnovprize.jpg"
+            alt="Igor Smirnov receiving 1st prize at Kasparov's Cup 2009"
+            loading="lazy"
+          />
+          <div class="ach-item__year" aria-hidden="true">2009</div>
+        </div>
+        <div class="ach-item__content">
+          <div class="ach-item__medal" aria-hidden="true">
+            <span>🥇</span>
+          </div>
+          <h3 class="ach-item__title">1st Prize — Kasparov's Cup</h3>
+          <p class="ach-item__text">
+            Igor claimed first prize at the prestigious Kasparov's Cup in 2009 — 
+            one of the most celebrated open tournaments in Eastern Europe, named after 
+            the legendary World Champion Garry Kasparov. A defining result that announced 
+            Igor's arrival among the elite.
+          </p>
+          <div class="ach-item__tag">Tournament Victory</div>
+        </div>
+      </article>
+
+      <!-- 2: Ukraine Championship -->
+      <article class="ach-item ach-item--flip reveal" data-reveal="fade-up" data-delay="1">
+        <div class="ach-item__img-wrap">
+          <div class="ach-item__img-bg" aria-hidden="true"></div>
+          <img
+            src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/ukraine-championship.png"
+            alt="Igor Smirnov at the Ukraine Championship 2005"
+            loading="lazy"
+          />
+          <div class="ach-item__year" aria-hidden="true">2005</div>
+        </div>
+        <div class="ach-item__content">
+          <div class="ach-item__medal" aria-hidden="true">
+            <span>🏆</span>
+          </div>
+          <h3 class="ach-item__title">1st Place — Ukraine Championship</h3>
+          <p class="ach-item__text">
+            Winning the Ukraine National Championship is among the highest domestic honours 
+            in a country with an extraordinarily deep chess tradition. Igor's 2005 victory 
+            over a field of top-rated Ukrainian Grandmasters cemented his status as one of 
+            the country's finest players.
+          </p>
+          <div class="ach-item__tag">National Champion</div>
+        </div>
+      </article>
+
+      <!-- 3: IM at 13 / GM at 20 -->
+      <article class="ach-item reveal" data-reveal="fade-up" data-delay="0">
+        <div class="ach-item__img-wrap">
+          <div class="ach-item__img-bg" aria-hidden="true"></div>
+          <img
+            src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/international-master-at-13.jpg"
+            alt="Igor Smirnov as a young chess prodigy"
+            loading="lazy"
+          />
+          <div class="ach-item__year" aria-hidden="true">IM '96 · GM '03</div>
+        </div>
+        <div class="ach-item__content">
+          <div class="ach-item__medal" aria-hidden="true">
+            <span>♟</span>
+          </div>
+          <h3 class="ach-item__title">International Master at 13. Grandmaster at 20.</h3>
+          <p class="ach-item__text">
+            Igor earned his International Master (IM) title at the exceptional age of 13 — 
+            a rare achievement that signals generational talent. He continued his ascent to 
+            earn the FIDE Grandmaster title at 20, joining the top fraction of one percent 
+            of all chess players who have ever lived.
+          </p>
+          <div class="ach-item__tag">FIDE Titles</div>
+        </div>
+      </article>
+
+      <!-- 4: World Youth Olympiad -->
+      <article class="ach-item ach-item--flip reveal" data-reveal="fade-up" data-delay="1">
+        <div class="ach-item__img-wrap">
+          <div class="ach-item__img-bg" aria-hidden="true"></div>
+          <img
+            src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/world-youth-olympiad.png"
+            alt="Igor Smirnov at the World Youth Olympiad 2003"
+            loading="lazy"
+          />
+          <div class="ach-item__year" aria-hidden="true">2003</div>
+        </div>
+        <div class="ach-item__content">
+          <div class="ach-item__medal" aria-hidden="true">
+            <span>🥈</span>
+          </div>
+          <h3 class="ach-item__title">2nd Place — World Youth Olympiad</h3>
+          <p class="ach-item__text">
+            Representing Ukraine on the world stage, Igor earned a silver medal at the 
+            World Youth Olympiad in 2003. Competing against the best young players from 
+            every chess-playing nation on earth, this result confirmed Igor as one of the 
+            most gifted junior players of his generation.
+          </p>
+          <div class="ach-item__tag">World Stage</div>
+        </div>
+      </article>
+
+      <!-- 5: The Hindu feature -->
+      <article class="ach-item reveal" data-reveal="fade-up" data-delay="0">
+        <div class="ach-item__img-wrap">
+          <div class="ach-item__img-bg" aria-hidden="true"></div>
+          <img
+            src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/hindu-news-paper.png"
+            alt="Igor Smirnov featured in The Hindu newspaper"
+            loading="lazy"
+          />
+          <div class="ach-item__year" aria-hidden="true">Press</div>
+        </div>
+        <div class="ach-item__content">
+          <div class="ach-item__medal" aria-hidden="true">
+            <span>📰</span>
+          </div>
+          <h3 class="ach-item__title">Featured in India's <em>The Hindu</em></h3>
+          <p class="ach-item__text">
+            Igor's teaching methods gained international recognition when he was featured 
+            in <em>The Hindu</em> — one of India's oldest and most respected newspapers, 
+            published since 1878. The feature highlighted Igor's unique approach to chess 
+            education and the remarkable results his students were achieving worldwide.
+          </p>
+          <div class="ach-item__tag">International Media</div>
+        </div>
+      </article>
+
+      <!-- 6: 10-board simul -->
+      <article class="ach-item ach-item--flip reveal" data-reveal="fade-up" data-delay="1">
+        <div class="ach-item__img-wrap">
+          <div class="ach-item__img-bg" aria-hidden="true"></div>
+          <img
+            src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/10-board-simul.jpg"
+            alt="Igor Smirnov playing a 10-board simultaneous exhibition"
+            loading="lazy"
+          />
+          <div class="ach-item__year" aria-hidden="true">Simul</div>
+        </div>
+        <div class="ach-item__content">
+          <div class="ach-item__medal" aria-hidden="true">
+            <span>♛</span>
+          </div>
+          <h3 class="ach-item__title">10-Board Simultaneous Exhibition</h3>
+          <p class="ach-item__text">
+            In a simultaneous exhibition ("simul"), a single Grandmaster plays multiple 
+            opponents at the same time — walking from board to board, making moves against 
+            each player in turn. Igor's 10-board simul is a vivid demonstration of the 
+            Grandmaster ability to hold complex positions, plans, and threats across 
+            an entire roomful of challengers simultaneously.
+          </p>
+          <div class="ach-item__tag">Grandmaster Exhibition</div>
+        </div>
+      </article>
+
+    </div><!-- /.ach-grid -->
+
+  </div><!-- /.achievements__inner -->
+
+</section>
+<!-- /ACHIEVEMENTS -->
+
+
+<section class="social-proof" id="social-proof" aria-label="Social proof from instructors and champions">
+  <div class="social-proof__inner">
+    <header class="social-proof__header reveal" data-reveal="fade-up" data-delay="0">
+      <div class="section-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Trusted by champions</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="social-proof__title">Meet the Masters Who Back Igor's Method</h2>
+      <p class="social-proof__intro">
+        Six respected Grandmasters and champions who have partnered with Igor, trained alongside him, or spoken about the clarity his system brings.
+      </p>
+    </header>
+
+    <div class="social-proof__grid" role="list">
+      <article class="social-card reveal" data-reveal="fade-up" data-delay="0" role="listitem">
+        <img
+          class="social-card__image"
+          src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/gm-karthik.png"
+          alt="Grandmaster Karthik"
+          loading="lazy"
+        />
+        <div class="social-card__body">
+          <h3 class="social-card__name">Meet Grandmaster Karthik</h3>
+          <p class="social-card__quote">AFTER A FEW MONTHS OF TRAINING STARTED BEATING IMS AND GMS (IN OFFICIAL TOURNAMENTS)!
+“Through the course 'Calculate till Mate’, my calculating ability has changed completely, and it has opened my eyes to the vast vista of opportunities to develop the most interesting moves against tough opponents. I quickly reached a 2276 rating in a few months and eventually became a Grandmaster.”</p>
+          <span class="social-card__role">Grandmaster</span>
+        </div>
+      </article>
+
+      <article class="social-card reveal" data-reveal="fade-up" data-delay="1" role="listitem">
+        <img
+          class="social-card__image"
+          src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/Jaan-Ehlvest-photo-by-Michael-Atkins.jpg"
+          alt="GM Jaan Ehlvest"
+          loading="lazy"
+        />
+        <div class="social-card__body">
+          <h3 class="social-card__name">Meet GM Jaan Ehlvest</h3>
+          <p class="social-card__quote">“My name is Jaan Ehlvest. I was one of the top tournament players during 1988 till 1991 when I finished the World Cup tournament series only behind Kasparov, Karpov and Salov.
+Talking about Smirnov’s concept – it is more practical. I like that he has a lot of examples from practical games. I myself used some of the materials presented by Igor and I was a very satisfied customer.”</p>
+          <span class="social-card__role">Former world number 6</span>
+        </div>
+      </article>
+
+      <article class="social-card reveal" data-reveal="fade-up" data-delay="2" role="listitem">
+        <img
+          class="social-card__image"
+          src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/ashwin-aco-world-champion.png"
+          alt="Ashwin, ACO World Champion"
+          loading="lazy"
+        />
+        <div class="social-card__body">
+          <h3 class="social-card__name">Meet Ashwin</h3>
+          <p class="social-card__quote">I became the ACO World Champion after learning the system taught by Igor.
+Ashwin Subramanian is a 40-year old engineer who has bought more than 15 RCA chess courses.
+He won the World Amatuer Chess Organization (ACO) Championship with an amazing score of 7.5/9 points! He was the only unrated player in the field, the rest were all rated players.</p>
+          <span class="social-card__role">ACO World Champion</span>
+        </div>
+      </article>
+
+      <article class="social-card reveal" data-reveal="fade-up" data-delay="3" role="listitem">
+        <img
+          class="social-card__image"
+          src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/james.png"
+          alt="James Sawaski, Michigan State Champion"
+          loading="lazy"
+        />
+        <div class="social-card__body">
+          <h3 class="social-card__name">Meet James Sawaski</h3>
+          <p class="social-card__quote">I became Michigan Champion at age 44 after 30 years of trying after studying Igor’s courses.
+James Sawaski had been trying to win one of the amateur championships of his Michigan/ Wisconsin area since he was 14 years old. Then, in 2015, James Sawaski became the Michigan State Amateur Championship Winner!
+After mastering the GM Smirnov’s course, he was able to take 1st place in this tournament at the age of 44!</p>
+          <span class="social-card__role">Michigan State Champion</span>
+        </div>
+      </article>
+
+      <article class="social-card reveal" data-reveal="fade-up" data-delay="4" role="listitem">
+        <img
+          class="social-card__image"
+          src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/vladimir.png"
+          alt="Vladimir Dragovic"
+          loading="lazy"
+        />
+        <div class="social-card__body">
+          <h3 class="social-card__name">Meet Vladimir Dragovic</h3>
+          <p class="social-card__quote">“8 months ago I just started playing. Now I am 1800, and moving up fast.
+Hello Igor,your new course is what was needed! It brings all that I went through in your previous courses to a new, deeper level of understanding.
+I am so surprised, and on second thought I am not. it is now obvious that you deeply understand the teaching process.”</p>
+          <span class="social-card__role">Grandmaster, age 49</span>
+        </div>
+      </article>
+
+      <article class="social-card reveal" data-reveal="fade-up" data-delay="5" role="listitem">
+        <img
+          class="social-card__image"
+          src="https://chess-teacher.net/wp-content/themes/oceanwp/assets/masterclass-page/img/im-jose.png"
+          alt="IM Jose Gascon"
+          loading="lazy"
+        />
+        <div class="social-card__body">
+          <h3 class="social-card__name">Meet IM Jose Gascon</h3>
+          <p class="social-card__quote">Recently I became the youngest International Master of Venezula
+“So when I took the masterclass I saw it as a chance to improve my chess. I study the GM Secrets course and it's incredible how GM Igor Smirnov explains the most importants ideas.
+I began to use these ideas on tournaments and I quickly won many tournaments and became an International Master.
+So I highly recommend investing a little money buying this course and let Igor do all the rest!!!”</p>
+          <span class="social-card__role">International Master</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="final-cta" id="final-cta" aria-label="Final invitation to join">
+  <div class="final-cta__inner">
+    <p class="final-cta__eyebrow">Final invitation</p>
+    <h2 class="final-cta__headline">Unlock the free masterclass and start playing with purpose.</h2>
+    <p class="final-cta__text">
+      Join 50,000+ players who are learning the method that turns confusion into confidence.
+      Enter your email to reserve your free spot and receive the masterclass guide instantly.
+    </p>
+    <div class="final-cta__actions">
+      <button id="open-email-popup" class="btn-primary final-cta__button" type="button">
+        Reserve my free seat
+      </button>
+      <p class="final-cta__reassurance">Free access · Instant delivery · No credit card required</p>
+    </div>
+  </div>
+</section>
+
+
+<div class="email-popup" id="email-popup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="email-popup-title" hidden>
+  <div class="email-popup__backdrop" data-popup-close="true"></div>
+  <div class="email-popup__panel">
+    <button class="email-popup__close" id="close-email-popup" aria-label="Close email form">×</button>
+    <div class="email-popup__content">
+      <p class="email-popup__eyebrow">Free Training Access</p>
+      <h3 class="email-popup__title" id="email-popup-title">Get the masterclass delivered to your inbox.</h3>
+      <p class="email-popup__copy">
+        Enter your email below and we’ll send you instant access to Igor’s free training plus a concise preparation guide.
+      </p>
+      <form class="email-popup__form" action="https://chess-teacher.net/gm-igor-smirnov-masterclass/?utm_source=Newsletter&utm_medium=Newsletter+Regular&utm_campaign=Newsletter+Regular&utm_id=Newsletter+Regular" method="post">
+        <label class="email-popup__label" for="first-name-input">First Name</label>
+        <input class="email-popup__input" id="first-name-input" name="firstname" type="text" placeholder="Your first name" required />
+        <label class="email-popup__label" for="last-name-input">Last Name</label>
+        <input class="email-popup__input" id="last-name-input" name="lastname" type="text" placeholder="Your last name" required />
+        <label class="email-popup__label" for="email-input">Email address</label>
+        <input class="email-popup__input" id="email-input" name="email" type="email" placeholder="you@example.com" required />
+        <button class="btn-primary email-popup__submit" type="submit">Send me access</button>
+      </form>
+      <p class="email-popup__small">We’ll never share your email. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+  <!-- Social proof notification widget -->
+  <div class="social-toast" id="social-toast" aria-live="polite" aria-atomic="true" data-visible="false" data-position="bottom-left">
+    <div class="social-toast__panel" role="status">
+      <div class="social-toast__content">
+        <div class="social-toast__badge">
+          <span class="social-toast__flag" id="social-toast-flag">🇧🇷</span>
+          <span class="social-toast__live-dot" aria-hidden="true"></span>
+          <span class="social-toast__badge-copy">Live enrollment</span>
+        </div>
+        <p class="social-toast__message">
+          <strong id="social-toast-name">Carlos</strong> from <span id="social-toast-country">Brazil</span>
+          <span id="social-toast-action">joined the Academy</span>
+        </p>
+        <p class="social-toast__meta" id="social-toast-time">2 minutes ago</p>
+      </div>
+      <div class="social-toast__controls">
+        <button class="social-toast__toggle" id="social-toast-sound-toggle" type="button" aria-pressed="true" aria-label="Toggle notification sound">🔔</button>
+        <button class="social-toast__close" id="social-toast-close" type="button" aria-label="Dismiss notification">×</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <div class="main-footer__inner">
+      <img src="/img/rca-logo.png" alt="Remote Chess Academy logo" class="main-footer__logo" />
+      <p class="main-footer__text">
+        © 2024 Remote Chess Academy · <a href="#" class="main-footer__link">Privacy Policy</a> · <a href="#" class="main-footer__link">Terms & Conditions</a> · Email questions to <a href="mailto:support@chess-teacher.com" class="main-footer__link">support@chess-teacher.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="siterev.js"></script>
+</body>
+</html>
